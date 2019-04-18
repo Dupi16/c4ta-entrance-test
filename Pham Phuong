@@ -1,0 +1,157 @@
+# Bai1
+so1 = int("Nhap vao so thu nhat:")
+so2 = int("Nhap vao so thu hai:")
+print("Tong cua 2 so la:", so1+so2)
+
+# Bai2
+year = int(input("Nhap vao nam:"))
+if year%4 == 0:
+  print("Nam nhuan")
+else:
+  print("Nam khong nhuan")
+  
+# Bai3
+num = int(input("Nhap vao so:"))
+num = str(num)
+len = len(num)
+print("So nay co so chu so la:", len)
+
+# Bai4
+day = []
+for i in range(1, 21):
+  day.append(i)
+print(','.join(day))
+
+# Bai5
+day = []
+for i in range(1, 21):
+  if i%3==0:
+   day.append(i)
+  else:
+    break
+print(','.join(day))
+
+# Bai6
+print("Hi there, this is our sequence:")
+print("1, 5, -9, 3")
+add = int(input("What do you want to add:"))
+print("This is our new sequence:")
+print("1, 5, -9, 3, ", add)
+
+# Bai7
+print("Hi there, this is our sequence:")
+print("1, 5, -9, 3")
+add = int(input("What do you want to add:"))
+print("This is our new sequence:")
+print(add, ", 1, 5, -9, 3")
+
+# Bai8
+print("Hi there, this is our sequence:")
+c = str(1, 5, -9, 3)
+con = input("Where do you want to delete (head/tail):")
+print("This is our new sequence:")
+if con == head:
+  print("5, -9, 3")
+elif con == tail:
+  print("1, 5, -9")
+else:
+  print("Khong hop le!")
+ 
+# Bai9
+import math
+
+def PTB2(a, b, c):
+  if a == 0 and b == 0:
+    if c != 0:
+      print("Phuong trinh vo nghiem")
+    else:
+      print("Phuong trinh co vo so nghiem)
+  if a == 0 and b != 0:
+    print("Phuong trinh co nghiem duy nhat x = ", -c/b)
+  if a != 0:
+    del2 = b**2 - 4*a*c
+    if del2 > 0:
+      del = sqrt(del2)
+      print("Phuong trinh co 2 nghiem:")
+      print("x1 = ", (-b-del)/(2*a))
+      print("x2 = ", (-b+del)/(2*a))
+    elif del2 == 0:
+      print("Phuong trinh co nghiem kep x1 = x2 = ", -b/(2*a))
+    else:
+      print("Phuong trinh vo nghiem")
+  
+
+a = int(input("Nhap vao he so a:"))
+b = int(input("Nhap vao he so b:"))
+c = int(input("Nhap vao he so c:"))
+PTB2(a, b, c)
+
+# Bai10
+class Counter:
+  def __init__(self):
+    count = 0
+  def tick(self):
+    count += 1
+  def reset(self):
+    count = 0
+  
+# Bai11
+
+#Tim so be nhat trong 1 day so:
+
+items = [for x in input("Nhap vao cac so cach nhua boi dau ',':").split(',')]
+print(min(items))
+
+#Tinh giai thua cau 1 so nhap boi nguoi dung
+
+def fact(n):
+  if n == 0:
+    return 1
+  else:
+    return n*fact(n-1)
+    
+n = int(input("Nhap vao mot so tu nhien:"))
+d = fact(n)
+print("n! = ", d)
+
+#Tinh mot so trong day Fib
+
+def Fib(n):
+  if n == 0 or n == 1:
+    return 1
+  else:
+    return Fib(n-1) + Fib(n-2)
+    
+n = int(input("Nhap vao so n:"))
+d = Fib(n)
+print(d)
+
+#Tim uoc chung lon nhat cau 2 so
+
+def GCD(a, b):
+  while b != 0:
+    tmp = a%b
+    a = b
+    b = tmp
+  return a
+
+a = int(input("Nhap vao so thu nhat:"))
+b = int(input("Nhap vao so thu hai:"))
+d = GCD(a, b)
+print("Uoc chung lon nhat cua 2 so la:", d)
+
+#Dao chieu 1 day (So hoac chu)
+
+items = [for x in input("Nhap vao 1 day so hoac chu:").split(','))]
+list(reversed(items))
+print(list)
+      
+      
+
+  
+
+
+
+
+
+
